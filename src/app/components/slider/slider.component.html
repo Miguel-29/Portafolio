@@ -1,0 +1,22 @@
+<div class="section over-hide px-4 px-sm-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 align-self-center">
+                <div class="section mx-auto text-center slider-height-padding">
+                    <ng-container *ngFor="let item of dataSource; let i = index">
+                        <input #input class="checkbox" type="radio" [id]="'slider-'+ item.id" [name]="nameSlider"
+                            [value]="item.id" [(ngModel)]="selected" />
+                        <label [ngStyle]="{ 'background-image': 'url(' + item.img + ')'}"
+                            [for]="'slider-'+ item.id"></label>
+                    </ng-container>
+                    <ul>
+                        <li *ngFor="let item of dataSource; let i = index"
+                            [ngStyle]="{ 'background-image': 'url(' + item.img + ')','border-radius': item.id == selected ? '16px' : '50%', 'opacity': item.id == selected ? 1 : 0}">
+                            <span>{{item.text}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('assets/fonts/Heebo-Regular.ttf'),
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+// variables colores
+:root {
+    --mr-bg-color: #090f2d;
+    --mr-primary-color: #c11050;
+    --mr-text-color: #ffffffc9;
+    --mr-title-color: #fff;
+}
+
+p, button, span, a{
+    opacity: 0.8;
+}
+
+h1,h2,h3,h4,h5{
+    color: var( --mr-title-color);   
+}
+
+body{
+    height: 100vh;
+    background-color: var(--mr-bg-color);
+}
+
+*{
+    font-family: 'Heebo';
+    color: var(--mr-text-color);
+}
+
+// fonts
+.font-bold{
+    font-weight: bold;
+}
+
+.title{
+    font-size: 44px;
+}
+
+.text-link{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--mr-primary-color);   
+    &:hover{
+        opacity: 1;
+    }
+}

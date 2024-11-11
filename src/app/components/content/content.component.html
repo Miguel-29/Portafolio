@@ -1,0 +1,46 @@
+<ul class="my-4" ngbNav #nav="ngbNav" [(activeId)]="active">
+	<li [ngbNavItem]="1">
+		<button class="btn-nav mx-0 mx-md-3 mx-xl-5" ngbNavLink>Acerca</button>
+		<ng-template ngbNavContent>
+			<p>
+				¡Hola! Soy un desarrollador apasionado por la tecnología y la creación de soluciones innovadoras.
+			</p>
+			<p>
+				Tengo experiencia en desarrollo web y móvil, y un sólido conocimiento en tecnologías como JavaScript, HTML,
+				CSS, y frameworks como Angular, tambien cuento con conocimientos en Node.js, y Laravel. Me encanta resolver problemas complejos y transformar
+				ideas en productos funcionales y visualmente atractivos.
+			</p>
+			<p>
+				A lo largo de mi carrera, he trabajado en proyectos diversos que van desde pequeñas aplicaciones para
+				startups hasta plataformas de alto tráfico. Siempre busco aprender algo nuevo y mejorar mis habilidades,
+				y disfruto colaborar con otros para crear software de calidad.
+			</p>
+			<p>
+				Cuando no estoy programando, me gusta explorar nuevas tendencias tecnológicas, si buscas a alguien comprometido, creativo y con una buena
+				actitud para enfrentar desafíos, ¡hablemos!
+			</p>
+			<p>
+				Actualmente me encuentro desarrollando demos y herramientas, que permitan generar un acercamiento a los clientes, con el fin de que puedan encontrar siempre lo que necesitan.
+			</p>
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="2">
+		<button class="btn-nav mx-0 mx-md-3 mx-xl-5" ngbNavLink>Demos</button>
+		<ng-template ngbNavContent>
+			<section class="py-3">
+				<h4 class="font-bold pb-3">Landing Pages</h4>
+				<app-slider [dataSource]="landingPageDataSource" [nameSlider]="'ladingPage'" [selected]="landingPageDataSource[0].id"></app-slider>
+			</section>
+			<section class="py-3">
+				<h4 class="font-bold pb-3">Dashboard</h4>
+				<app-slider [dataSource]="dashboardDataSource" [nameSlider]="'dashboard'" [selected]="dashboardDataSource[0].id"></app-slider>
+			</section>
+			<section class="py-3">
+				<h4 class="font-bold pb-3">Login</h4>
+				<app-slider [dataSource]="loginDataSource" [nameSlider]="'login'" [selected]="loginDataSource[0].id"></app-slider>
+			</section>
+		</ng-template>
+	</li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

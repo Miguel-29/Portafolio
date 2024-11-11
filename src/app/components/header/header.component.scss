@@ -1,0 +1,10 @@
+.itemH{
+    display: flex;
+    padding-right: 8px;
+    .itemH-icon{
+        padding: 0 8px;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
